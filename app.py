@@ -6,7 +6,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model=load_model('deployment_28042020')
+model = load_model('deployment_28042020')
 
 @app.route('/')
 def home():
