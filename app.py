@@ -13,7 +13,6 @@ cols = ['age', 'sex', 'bmi', 'children', 'smoker', 'region']
 def home():
     return render_template("home.html")
 
-
 @app.route('/predict',methods=['POST'])
 def predict():
     int_features = [x for x in request.form.values()]
@@ -25,15 +24,11 @@ def predict():
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
-    '''
-    For direct API calls trought request
-    '''
     data = request.get_json(force=True)
     data_unseen = pd.DataFrame([data])
     prediction = predict_model(model, data=data_unseen)
     output = prediction.Label[0]
     return jsonify(output)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
