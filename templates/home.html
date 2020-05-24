@@ -16,13 +16,13 @@
 	<h1>Predict Insurance Bill</h1>
 
      <!-- Form to enter new data for predictions  -->
-    <form action="{{ url_for('predict')}}"method="POST">
+   <form action="{{ url_for('predict')}}"method="POST">
       <input type="text" name="age" placeholder="Age" required="required" /><br>
-    	<input type="text" name="sex" placeholder="Sex" required="required" /><br>
+    	<input type="text" name="sex" placeholder="Male or Female" required="required" /><br>
         <input type="text" name="bmi" placeholder="BMI" required="required" /><br>
-        <input type="text" name="children" placeholder="Children" required="required" /><br>
-        <input type="text" name="smoker" placeholder="Smoker" required="required" /><br>
-        <input type="text" name="region" placeholder="Region" required="required" /><br>
+        <input type="text" name="children" placeholder="Children: How many?" required="required" /><br>
+        <input type="text" name="smoker" placeholder="YES or NO" required="required" /><br>
+        <input type="text" name="region" placeholder="SOUTHEAST / SOUTHWEST / NORTHEAST / NORTHWEST" required="required" /><br>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
